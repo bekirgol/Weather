@@ -13,12 +13,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var data = Provider.of<WeatherViewModel>(context);
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset('assets/image/img.jpeg'),
             TextField(
+              decoration: InputDecoration(hintText: 'Şehir Giriniz'),
               controller: data.cityController,
             ),
             ElevatedButton(
@@ -32,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-                child: Text('onayla'))
+                child: Text('Onayla'))
           ],
         ),
       ),
