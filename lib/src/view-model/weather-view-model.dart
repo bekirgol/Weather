@@ -9,7 +9,7 @@ class WeatherViewModel extends ChangeNotifier {
     String url =
         'https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=$city';
     final response = await http.get(Uri.parse(url), headers: {
-      'authorization': 'apikey 2eCvY8zJFkAcaoZ9dQoOsw:06MIvg2PQlZPLQvuh8fY7T',
+      'authorization': 'apikey ******************************,
       'content-type': 'application/json',
     });
     if (response.statusCode == 200) {
